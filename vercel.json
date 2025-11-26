@@ -1,0 +1,7 @@
+{
+  "buildCommand": "npm ci && npm run build",
+  "outputDirectory": "dist",
+  "env": {
+    "VITE_CONVEX_URL": "@vite_convex_url"
+  }
+}

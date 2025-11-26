@@ -1,0 +1,15 @@
+services:
+  - type: static_site
+    name: libsphere-frontend
+    repo: https://github.com/sharma-create/libsphere
+    branch: main
+    buildCommand: npm ci && npm run build
+    publishPath: dist
+    plan: free
+    envVars:
+      - key: VITE_CONVEX_URL
+        value: "https://shocking-guanaco-163.convex.cloud"
+      - key: NODE_ENV
+        value: production
+    # Note: For sensitive values like CONVEX_DEPLOY_KEY, add the secret via the Render Dashboard and
+    # reference it as an env var in the Render UI. Do not put secrets in source control.
